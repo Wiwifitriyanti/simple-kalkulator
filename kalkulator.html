@@ -40,32 +40,30 @@
 
       function tambah()
       {
-        let nilai = ambilNilai();
-        let prosesTambah = 0;
-        for (let a = 0; a < nilai.length; a++)
-        {
-          prosesTambah += parseInt(nilai[a]);
-        }
-        // console.log(prosesTambah);
+        nilai = ambilNilai();
+        prosesTambah = parseInt(nilai[0]) + parseInt(nilai[1]);
         return printHasil(prosesTambah);
       }
 
       function kurang()
       {
         nilai = ambilNilai();
-        console.log(nilai);
+        prosesTambah1 = parseInt(nilai[0]) - parseInt(nilai[1]);
+        return printHasil(prosesTambah1);
       }
 
       function kali()
       {
         nilai = ambilNilai();
-        console.log(nilai);
+        prosesTambah2 = parseInt(nilai[0]) * parseInt(nilai[1]);
+        return printHasil(prosesTambah2);
       }
 
       function bagi()
       {
         nilai = ambilNilai();
-        console.log(nilai);
+        prosesTambah3 = parseInt (nilai[0]) / parseInt(nilai[1]);
+        return printHasil(prosesTambah3);
       }
     </script>
 </body>
