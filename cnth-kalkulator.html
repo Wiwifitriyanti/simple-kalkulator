@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator dengan Fitur Persen</title>
+	<style>
+		input[type="button"]{
+			width:50px;
+			height:50px;
+			font-size:20px;
+		}
+		input[type="text"]{
+			width:207px;
+			height:50px;
+			font-size:20px;
+			text-align:right;
+		}
+	</style>
+	<script>
+		function percent(){
+			var x = document.getElementById("result").value;
+			document.getElementById("result").value = x/100;
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<h2>Kalkulator dengan Fitur Persen</h2>
+		<table>
+			<tr>
+				<td><input type="text" id="result" /></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="1" onclick="document.getElementById('result').value += '1'" /></td>
+				<td><input type="radio" name="2" onclick="document.getElementById('result').value += '2'" /></td>
+				<td><input type="radio" name="3" onclick="document.getElementById('result').value += '3'" /></td>
+				<td><input type="radio" name="+" onclick="document.getElementById('result').value += '+'" /></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="4" onclick="document.getElementById('result').value += '4'" /></td>
+				<td><input type="radio" name="5" onclick="document.getElementById('result').value += '5'" /></td>
+				<td><input type="radio" name="6" onclick="document.getElementById('result').value += '6'" /></td>
+				<td><input type="radio" name="-" onclick="document.getElementById('result').value += '-'" /></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="7" onclick="document.getElementById('result').value += '7'" /></td>
+				<td><input type="radio" name="8" onclick="document.getElementById('result').value += '8'" /></td>
+				<td><input type="radio" name="9" onclick="document.getElementById('result').value += '9'" /></td>
+				<td><input type="radio" name="*" onclick="document.getElementById('result').value += '*'" /></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="C" onclick="document.getElementById('result').value = ''" /></td>
+				<td><input type="radio" name="0" onclick="document.getElementById('result').value += '0'" /></td>
+				<td><input type="radio" name="=" onclick="document.getElementById('result').value = eval(document.getElementById('result').value)" /></td>
+				<td><input type="radio" name="/" onclick="document.getElementById('result').value += '/'" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="%" onclick="percent()" /></td>
+			</tr>
+	
